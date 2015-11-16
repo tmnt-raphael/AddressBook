@@ -13,7 +13,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 
 /**
- * @author Ken Luy
+ * @author Ken
  * <p>
  * This class represents an address book. The address book stores instances of Entry classes. Each
  * of these instances represent an entry within the address book.
@@ -59,7 +59,7 @@ public class AddressBook {
    * 
    * <p>
    * [
-   *   {"name": "Ken Luy",
+   *   {"name": "Ken",
    *    "postalAddress": "",
    *    "note": "NYU student"
    *   },
