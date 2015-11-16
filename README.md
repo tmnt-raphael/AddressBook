@@ -25,4 +25,4 @@ Finally, add the entry to the address book using AddressBook.java's addEntry met
 myAddressBook.addEntry(myEntry);
 ```
 
-The documentation for more the methods of AddressBook.java are in that file, which uses the Javadoc code documentation format.
+The documentation for more methods of AddressBook.java are in that file, which uses the Javadoc code documentation format.
