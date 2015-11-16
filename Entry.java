@@ -1,5 +1,5 @@
 /**
- * @author Ken Luy
+ * @author Ken
  * 
  * <p>
  * This class represents an address book's entry. The entry contains the attributes, such as name
@@ -30,7 +30,7 @@ public class Entry {
   /**
    * This class initializes the attributes of the entry.
    * 
-   * @author Ken Luy
+   * @author Ken
    *
    */
   public static class Builder {
