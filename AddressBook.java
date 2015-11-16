@@ -7,6 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -28,9 +29,7 @@ import org.json.simple.JSONValue;
  * <p>
  * To view an entry, use the search() method to search for a string. If the string is contained in
  * any part of an entry, this would be considered a match. The method will return the search
- * results in the form of an ArrayList of Integers. These Integers will be the indices of the
- * entries that were in the search result. To get an entry by index, use the getEntry() method. The
- * entry's index shall be the method's argument.
+ * results in the form of a List Entry objects which are the entries that match the search results.
  * </p>
  */
 public class AddressBook {
@@ -167,18 +166,18 @@ public class AddressBook {
   
   /**
    * This method searches through each attribute of the entries in this address book. The search is
-   * case insensitive. The search result is returned. The search result contains the indices of the
-   * entries that have the search string.
+   * case insensitive. The search result is returned. The search result contains the entries that
+   * have the search string.
    * 
    * @param searchString
    * The string to be searched
    * 
    * @return
-   * An array of the indices of the entries that have the desired search string.
+   * An array of the entries that have the desired search string.
    */
-  public ArrayList<Integer> search(String searchString) {
+  public List<Entry> search(String searchString) {
     searchString = searchString.toLowerCase();
-    ArrayList<Integer> searchResult =  new ArrayList<Integer>();
+    List<Entry> searchResult =  new ArrayList<Entry>();
     
     // loops through each entry
     for(int i = 0; i < entryList.size(); i++) {
@@ -194,9 +193,10 @@ public class AddressBook {
       }
       
       if(matchFound == true) {
-        searchResult.add(i);
+        searchResult.add(getEntry(i));
       }
     }
+    
     return searchResult;
   }
   
