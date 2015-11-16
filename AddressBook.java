@@ -239,7 +239,10 @@ public class AddressBook {
     }
     
     // removes trailing comma and spaces
-    outputString = outputString.substring(0, outputString.length()-5);
+    String lastCharOfOutputString = outputString.substring(outputString.length()-1);
+    if (!lastCharOfOutputString.equals("[")) {
+      outputString = outputString.substring(0, outputString.length()-5);
+    }
     
     outputString = outputString + "\n]";
     
