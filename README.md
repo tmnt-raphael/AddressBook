@@ -9,7 +9,7 @@ To create an address book, create an instance of the AddressBook.java:
 AddressBook myAddressBook = new AddressBook();
 ```
 
-To add an entry into the address book, first create an Entry object using the builder Java design pattern:
+To add an entry into the address book, first create an "Entry" object using the builder Java design pattern:
 
 ```bash
 Entry myEntry = new Entry.Builder("John Doe")
@@ -19,7 +19,7 @@ Entry myEntry = new Entry.Builder("John Doe")
     .build();
 ```
 
-Finally, add the entry to the address book using AddressBook.java's addEntry method:
+Finally, add the entry to the address book using AddressBook.java's "addEntry" method:
 
 ```bash
 myAddressBook.addEntry(myEntry);
