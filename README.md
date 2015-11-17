@@ -3,13 +3,13 @@ This project is a Java API that could be used to create address books. The API i
 
 To create an address book, create an instance of the AddressBook.java class:
 
-```Python
+```java
 AddressBook myAddressBook = new AddressBook();
 ```
 
 To add an entry into the address book, first create an "Entry" object using the builder Java design pattern:
 
-```Python
+```java
 Entry myEntry = new Entry.Builder("John Doe")
     .postalAddress("123 Maple Street, Beverly Hills, CA 90210")
     .phoneNumber("818-555-1234")
@@ -19,7 +19,7 @@ Entry myEntry = new Entry.Builder("John Doe")
 
 Finally, add the entry to the address book using AddressBook.java's "addEntry" method:
 
-```Python
+```java
 myAddressBook.addEntry(myEntry);
 ```
 
