@@ -1,5 +1,5 @@
 # AddressBook
-This project is a Java API that could be used to create address books. The API is generalized to allow for it to be the back-end of clients or GUIs that may have rich features or specific data access optimizations to match user needs.
+This project provides a Java API that could be used to create address books. The API is generalized to allow for it to be the back-end of clients or GUIs that may have rich features or specific data access optimizations to match user needs.
 
 To create an address book, create an instance of the AddressBook.java class:
 
