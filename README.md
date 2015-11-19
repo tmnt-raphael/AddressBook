@@ -23,4 +23,28 @@ Finally, add the entry to the address book using AddressBook.java's "addEntry" m
 myAddressBook.addEntry(myEntry);
 ```
 
+Another way to create an address book is to load a file containing address book entry data:
+
+```java
+AddressBook loadedAddressBook = new AddressBook("AddressBookData.txt");
+```
+
+Now, an address book wit initial entries is created. The format of the input data that is used is json, which would look like this:
+
+```json
+[
+  {"name": "Ken",
+   "postalAddress": "",
+   "note": "NYU student"
+  },
+  {"name": "John Smith",
+   "phoneNumber": "949-555-1234",
+   "note": "software engineer"
+  },
+  {"name": "Jane Doe",
+   "emailAddress": "jane.doe@gmail.com"
+  }
+]
+```
+
 The documentation for more methods of AddressBook.java are in that file, which uses the Javadoc code documentation format. The corresponding Javadoc can be viewed on this webpage: http://tmnt-raphael.github.io/AddressBook/Javadoc.html.
