@@ -23,4 +23,4 @@ Finally, add the entry to the address book using AddressBook.java's "addEntry" m
 myAddressBook.addEntry(myEntry);
 ```
 
-The documentation for more methods of AddressBook.java are in that file, which uses the Javadoc code documentation format. The corresponding Javadoc can be viewed on this webpage: http://tmnt-raphael.github.io/AddressBook.
+The documentation for more methods of AddressBook.java are in that file, which uses the Javadoc code documentation format. The corresponding Javadoc can be viewed on this webpage: http://tmnt-raphael.github.io/AddressBook/Javadoc.html.
