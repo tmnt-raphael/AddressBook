@@ -1,0 +1,13 @@
+[
+  {"name": "Ken",
+   "postalAddress": "",
+   "note": "NYU student"
+  },
+  {"name": "John Smith",
+   "phoneNumber": "949-555-1234",
+   "note": "software engineer"
+  },
+  {"name": "Jane Doe",
+   "emailAddress": "jane.doe@gmail.com"
+  }
+]
