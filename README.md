@@ -29,7 +29,7 @@ Another way to create an address book is to load a file containing address book 
 AddressBook loadedAddressBook = new AddressBook("AddressBookData.txt");
 ```
 
-Now, an address book wit initial entries is created. The format of the input data that is used is json, which would look like this:
+Now, an address book with initial entries has been created. The format of the input data that is used is json, which would look like this:
 
 ```json
 [
