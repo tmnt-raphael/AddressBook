@@ -1,5 +1,3 @@
-package addressbook;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -25,13 +23,14 @@ import org.json.simple.JSONValue;
  * <p>
  * There are two ways to add entries to the address book: The first way is to load the entries from
  * a data file using this class' constructor that has the file's name as the argument. The second
- * way to add entries is to use the addEntry() method.
+ * way to add entries is to use the "addEntry" method.
  * </p>
  * 
  * <p>
- * To view an entry, use the search() method to search for a string. If the string is contained in
- * any part of an entry, this would be considered a match. The method will return the search
- * results in the form of a List Entry objects which are the entries that match the search results.
+ * To view an entry, use the "searchToGetEntries" or "searchToGetEntryIndices" methods to search for
+ * a string. If the string is contained in any part of an entry, this would be considered a match.
+ * The method will return an array of the search results, which will either have the entries or the
+ * indices at which the entries are located in AddressBook's entryList instance field.
  * </p>
  */
 public class AddressBook {
@@ -196,6 +195,77 @@ public class AddressBook {
       
       if(matchFound == true) {
         searchResult.add(getEntry(i));
+      }
+    }
+    
+    return searchResult;
+  }
+  
+  /**
+   * This method searches through each attribute of the entries in this address book. The search is
+   * case insensitive. The returned result contains the entries that have the search string.
+   * 
+   * @param searchString
+   * The string to be searched
+   * 
+   * @return
+   * An array of the entries that have the desired search string.
+   */
+  public List<Entry> searchToGetEntries(String searchString) {
+    searchString = searchString.toLowerCase();
+    List<Entry> searchResult =  new ArrayList<Entry>();
+    
+    // loops through each entry
+    for(int i = 0; i < entryList.size(); i++) {
+      Entry entryToAnalyze = entryList.get(i); 
+      boolean matchFound = false;
+      
+      // searches each attribute until the string is found
+      for (int j = 0; j < Entry.attributes.length; j++) {
+        if (entryToAnalyze.getter(Entry.attributes[j]).toLowerCase().contains(searchString)) {
+          matchFound = true;
+          break;
+        }
+      }
+      
+      if(matchFound == true) {
+        searchResult.add(getEntry(i));
+      }
+    }
+    
+    return searchResult;
+  }
+  
+  /**
+   * This method searches through each attribute of the entries in this address book. The search is
+   * case insensitive. The returned search result contains the indices of the entries that have the
+   * search string.
+   * 
+   * @param searchString
+   * The string to be searched
+   * 
+   * @return
+   * An array of the indices of the entries that have the desired search string.
+   */
+  public List<Integer> searchToGetEntryIndices(String searchString) {
+    searchString = searchString.toLowerCase();
+    List<Integer> searchResult =  new ArrayList<Integer>();
+    
+    // loops through each entry
+    for(int i = 0; i < entryList.size(); i++) {
+      Entry entryToAnalyze = entryList.get(i); 
+      boolean matchFound = false;
+      
+      // searches each attribute until the string is found
+      for (int j = 0; j < Entry.attributes.length; j++) {
+        if (entryToAnalyze.getter(Entry.attributes[j]).toLowerCase().contains(searchString)) {
+          matchFound = true;
+          break;
+        }
+      }
+      
+      if(matchFound == true) {
+        searchResult.add(new Integer(i));
       }
     }
     
