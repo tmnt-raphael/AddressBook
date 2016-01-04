@@ -23,7 +23,7 @@ Finally, add the entry to the address book using AddressBook.java's "addEntry" m
 myAddressBook.addEntry(myEntry);
 ```
 
-## Loading Address Book from Data File
+## Loading an Address Book from a Data File
 
 Another way to create an address book is to load a file containing address book entry data:
 
