@@ -23,6 +23,8 @@ Finally, add the entry to the address book using AddressBook.java's "addEntry" m
 myAddressBook.addEntry(myEntry);
 ```
 
+## Loading Address Book from Data File
+
 Another way to create an address book is to load a file containing address book entry data:
 
 ```java
@@ -46,5 +48,7 @@ Now, an address book with initial entries has been created. The format of the in
   }
 ]
 ```
+
+## Further Documentaion
 
 The documentation for more methods of AddressBook.java are in that file, which uses the Javadoc code documentation format. The corresponding Javadoc can be viewed on this webpage: http://tmnt-raphael.github.io/AddressBook/Javadoc.html.
