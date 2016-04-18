@@ -10,7 +10,7 @@ This project provides a Java API that could be used to create address books. The
 To create an address book, create an instance of the AddressBook.java class:
 
 ```java
-AddressBook myAddressBook = new AddressBook();
+AddressBook sampleAddressBook = new AddressBook();
 ```
 
 To add an entry into the address book, first create an "Entry" object using the builder Java design pattern:
@@ -26,7 +26,7 @@ Entry myEntry = new Entry.Builder("John Doe")
 Finally, add the entry to the address book using AddressBook.java's "addEntry" method:
 
 ```java
-myAddressBook.addEntry(myEntry);
+sampleAddressBook.addEntry(myEntry);
 ```
 
 ## Loading an Address Book from a Data File
@@ -57,4 +57,4 @@ Now, an address book with initial entries has been created. The format of the in
 
 ## Further Documentaion
 
-The documentation for more methods of AddressBook.java are in that file, which uses the Javadoc code documentation format. The corresponding Javadoc can be viewed on this webpage: http://tmnt-raphael.github.io/AddressBook/Javadoc.html.
+The documentation for more methods of the AddressBook class are in the AddressBook.java file, which uses the Javadoc code documentation format. The corresponding Javadoc can be viewed on this webpage: http://tmnt-raphael.github.io/AddressBook/Javadoc.html.
