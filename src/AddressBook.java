@@ -27,11 +27,11 @@ import org.json.simple.JSONValue;
  * </p>
  * 
  * <p>
- * To view an entry, use the "searchToGetEntries" or "searchToGetEntryIndices" methods to search for
- * a string. If the string is contained in any part of an entry, this would be considered a match.
- * The method will return an array of the search results, which will either have the entries or the
- * indices at which the entries are located in AddressBook's entryList instance field.
+ * To view entries, use the "search" method to search for a string. If the string is contained in 
+ * any part of an entry, this would be considered a match in the search. The method will return an 
+ * array of the search results, which will be copies of the Entry objects.
  * </p>
+ * 
  */
 public class AddressBook {
   
@@ -133,7 +133,8 @@ public class AddressBook {
   }
   
   /**
-   * This method removes an entry given the entry's index.
+   * This method removes an entry. Use the "searchToGetEntryIndices" method in order to determine 
+   * the index of the entry that is desired to be deleted.
    * 
    * @param entryIndex
    * The index of the entry desired to be removed.

@@ -4,8 +4,8 @@ import java.io.IOException;
  * @author Ken
  *
  * <p>
- * This class tests AddressBook.java by creating an instance of AddressBook and loads in entries
- * from the AddressBookData.txt data file. The data file uses the JSON format.
+ * This class tests AddressBook.java by creating an instances of AddressBook and adds entries to the
+ * address books.
  * </p>
  */
 public class AddressBookApp {
