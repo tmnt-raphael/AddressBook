@@ -1,0 +1,14 @@
+Updating Javadoc on website.
+Step 1: right click --> Export... --> Javadoc
+
+Step 2:
+
+cd ~/Documents/workspace/AddressBook/doc/
+git commit -am 'Updated Javadoc.'
+git push
+rm index.html
+cp *.html ~/Documents/workspace/AddressBookDoc/AddressBook/
+
+cd ~/Documents/workspace/AddressBookDoc/AddressBook/
+git commit -am 'Updated Javadoc.'
+git push
