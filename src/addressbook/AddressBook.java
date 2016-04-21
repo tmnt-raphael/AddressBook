@@ -16,7 +16,7 @@ import org.json.simple.JSONValue;
 /**
  * @author Ken
  * <p>
- * This class represents an address book. The address book stores instances of Entry classes. Each
+ * This class represents an address book. The address book stores instances of the Entry class. Each
  * of these instances represent an entry within the address book.
  * </p>
  *
@@ -27,11 +27,11 @@ import org.json.simple.JSONValue;
  * </p>
  * 
  * <p>
- * To view an entry, use the "searchToGetEntries" or "searchToGetEntryIndices" methods to search for
- * a string. If the string is contained in any part of an entry, this would be considered a match.
- * The method will return an array of the search results, which will either have the entries or the
- * indices at which the entries are located in AddressBook's entryList instance field.
+ * To view entries, use the "search" method to search for a string. If the string is contained in 
+ * any part of an entry, this would be considered a match in the search. The method will return an 
+ * array of the search results, which will be copies of the Entry objects.
  * </p>
+ * 
  */
 public class AddressBook {
   
@@ -133,7 +133,8 @@ public class AddressBook {
   }
   
   /**
-   * This method removes an entry given the entry's index.
+   * This method removes an entry. Use the "searchToGetEntryIndices" method in order to determine 
+   * the index of the entry that is desired to be deleted.
    * 
    * @param entryIndex
    * The index of the entry desired to be removed.
@@ -166,15 +167,15 @@ public class AddressBook {
   }
   
   /**
-   * This method searches through each attribute of the entries in this address book. The search is
-   * case insensitive. The search result is returned. The search result contains the entries that
-   * have the search string.
+   * This method searches through each attribute of the entries in the address book. The search is
+   * case insensitive. The returned search result will contain the entries whose attributes have
+   * the search string.
    * 
    * @param searchString
    * The string to be searched
    * 
    * @return
-   * An array of the entries that have the desired search string.
+   * An array of the entries whose attributes have the desired search string.
    */
   public List<Entry> search(String searchString) {
     searchString = searchString.toLowerCase();
@@ -202,38 +203,17 @@ public class AddressBook {
   }
   
   /**
-   * This method searches through each attribute of the entries in this address book. The search is
-   * case insensitive. The returned result contains the entries that have the search string.
+   * This is a wrapper method whose functionality is identical to the "search" method. This method
+   * has a more descriptive name than the "search" method.
    * 
    * @param searchString
    * The string to be searched
    * 
    * @return
-   * An array of the entries that have the desired search string.
+   * An array of the entries whose attributes have the desired search string.
    */
   public List<Entry> searchToGetEntries(String searchString) {
-    searchString = searchString.toLowerCase();
-    List<Entry> searchResult =  new ArrayList<Entry>();
-    
-    // loops through each entry
-    for(int i = 0; i < entryList.size(); i++) {
-      Entry entryToAnalyze = entryList.get(i); 
-      boolean matchFound = false;
-      
-      // searches each attribute until the string is found
-      for (int j = 0; j < Entry.attributes.length; j++) {
-        if (entryToAnalyze.getter(Entry.attributes[j]).toLowerCase().contains(searchString)) {
-          matchFound = true;
-          break;
-        }
-      }
-      
-      if(matchFound == true) {
-        searchResult.add(getEntry(i));
-      }
-    }
-    
-    return searchResult;
+    return search(searchString);
   }
   
   /**
