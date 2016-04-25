@@ -16,7 +16,7 @@ AddressBook sampleAddressBook = new AddressBook();
 To add an entry into the address book, first create an "Entry" object using the builder Java design pattern:
 
 ```java
-Entry myEntry = new Entry.Builder("John Doe")
+Entry sampleEntry = new Entry.Builder("John Doe")
     .postalAddress("123 Maple Street, Beverly Hills, CA 90210")
     .phoneNumber("818-555-1234")
     .note("sample address book entry")
@@ -26,7 +26,7 @@ Entry myEntry = new Entry.Builder("John Doe")
 Finally, add the entry to the address book using AddressBook.java's "addEntry" method:
 
 ```java
-sampleAddressBook.addEntry(myEntry);
+sampleAddressBook.addEntry(sampleEntry);
 ```
 
 ## Loading an Address Book from a Data File
@@ -54,6 +54,8 @@ Now, an address book with initial entries has been created. The format of the in
   }
 ]
 ```
+
+The "name" data field is required for each object in the JSON. The find out what the other data fields' names are, look at the methods of the "Builder" class of the "Entry" class.
 
 ## Further Documentaion
 
