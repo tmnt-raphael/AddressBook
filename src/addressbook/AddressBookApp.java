@@ -4,7 +4,7 @@ import java.io.IOException;
  * @author Ken
  *
  * <p>
- * This class tests AddressBook.java by creating an instances of AddressBook and adds entries to the
+ * This class tests AddressBook.java by creating instances of AddressBook and adds entries to the
  * address books.
  * </p>
  */
