@@ -133,7 +133,7 @@ public class AddressBook {
   }
   
   /**
-   * This method removes an entry. Use the "searchToGetEntryIndices" method in order to determine 
+   * This method removes an entry from the address book. Use the "searchToGetEntryIndices" method in order to determine 
    * the index of the entry that is desired to be deleted.
    * 
    * @param entryIndex
@@ -217,9 +217,9 @@ public class AddressBook {
   }
   
   /**
-   * This method searches through each attribute of the entries in this address book. The search is
-   * case insensitive. The returned search result contains the indices of the entries that have the
-   * search string.
+   * This method searches through each attribute of the entries in the address book. The search is
+   * case insensitive. The returned search result will contain the indices of the entries whose
+   * attributes have the search string.
    * 
    * @param searchString
    * The string to be searched
