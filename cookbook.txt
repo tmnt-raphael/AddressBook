@@ -1,7 +1,20 @@
 Updating Javadoc on website.
-Step 1: right click --> Export... --> Javadoc
+Step 1: Copy updated code to svn project.
 
-Step 2:
+cd ~/Documents/workspace/AddressBook/src/addressbook
+git pull
+cp AddressBook* ~/Documents/workspace/svnroot_pqs_153/trunk/PS1_fa15/src/src/
+
+Step 2: Use Eclipse to generate Javadoc of svn project.
+
+right click --> Export... --> Javadoc
+
+Step 3: Copy Javadoc of svn project to git project
+
+cd ~/Documents/workspace/svnroot_pqs_153/trunk/PS1_fa15/src/doc
+cp *.html ~/Documents/workspace/AddressBook/doc/
+
+Step 4: Copy Javadoc of git project to gh-pages branch
 
 cd ~/Documents/workspace/AddressBook/doc/
 git commit -am 'Updated Javadoc.'
