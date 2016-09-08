@@ -12,7 +12,7 @@ right click --> Export... --> Javadoc
 Step 3: Copy Javadoc of svn project to git project
 
 cd ~/Documents/workspace/svnroot_pqs_153/trunk/PS1_fa15/src/doc
-cp *.html ~/Documents/workspace/AddressBook/doc/
+cp -R * ~/Documents/workspace/AddressBook/doc/
 cd ~/Documents/workspace/AddressBook/doc/
 git commit -am 'Updated Javadoc.'
 git push
