@@ -19,8 +19,9 @@ git push
 
 Step 4: Copy Javadoc of git project to gh-pages branch
 
-rm ~/Documents/workspace/AddressBook/doc/index.html
-cp ~/Documents/workspace/AddressBook/doc/*.html ~/Documents/workspace/AddressBookDoc/AddressBook/
+cd ~/Documents/workspace/AddressBook/doc
+rm index.html
+cp -R * ~/Documents/workspace/AddressBookDoc/AddressBook/
 
 cd ~/Documents/workspace/AddressBookDoc/AddressBook/
 git commit -am 'Updated Javadoc.'
