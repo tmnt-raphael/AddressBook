@@ -55,7 +55,7 @@ Now, an address book with initial entries has been created. The format of the in
 ]
 ```
 
-The "name" data field is required for each object in the JSON. The find out what the other data fields' names are, look at the methods of the "Builder" class of the "Entry" class.
+The "name" data field is required for each object in the JSON. To find out what the other data fields' names are, look at the methods of the "Builder" class of the "Entry" class.
 
 ## Further Documentaion
 
